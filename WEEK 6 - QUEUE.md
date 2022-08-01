@@ -105,22 +105,32 @@ int main() {
     int n, inp;
     cin >> n;
     queue<int> q;
-    while(n--) {
+    while(n--) 
+    {
         int inp;
         cin >> inp;
         if (inp == 1) cout << q.size() << endl;
-        else if (inp == 2) {
+        else if (inp == 2) 
+        {
             if (q.empty() == true) cout << "YES" << endl;
             else cout << "NO" << endl;
-        } else if (inp == 3) {
+        } 
+        else if (inp == 3) 
+        {
             cin >> inp;
             q.push(inp);
-        } else if (inp == 4) {
+        } 
+        else if (inp == 4) 
+        {
             if (q.size()) q.pop();
-        } else if (inp == 5) {
+        } 
+        else if (inp == 5) 
+        {
             if (q.size()) cout << q.front() << endl;
             else cout << -1 << endl;
-        } else if (inp == 6) {
+        } 
+        else if (inp == 6) 
+        {
             if (q.size()) cout << q.back() << endl;
             else cout << -1 << endl;
         }
