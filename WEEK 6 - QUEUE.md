@@ -9,7 +9,7 @@
 
 QUEUE khác với STACK ở điểm: QUEUE là một ống có 2 đầu, vào 1 đầu và đi ra ở đầu còn lại. STACK thì là một chiếc thùng, vào, ra chung 1 đường.
 
-[![Minh họa QUEUE]](https://www.fluentcpp.com/2018/03/20/heaps-and-priority-queues-in-c-part-3-queues-and-priority-queues/)
+![Minh họa QUEUE](https://www.fluentcpp.com/wp-content/uploads/2018/01/queue.png)
 ### **2. Thao tác:** 
 #### a. Khai báo:
 ``` C++
