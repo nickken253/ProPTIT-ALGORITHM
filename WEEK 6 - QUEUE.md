@@ -72,7 +72,7 @@ priority_queue <int, vector<int>, greater<int>> pq;
 - **top()** Trả về phần tử đầu tiên của hàng đợi.
 - **push()** Nạp thêm một phần tử vào hàng đợi
 - **pop()** Xóa một phần tử ở đầu của hàng đợi.
-> Các hàm trên đều có độ phức tạp là **O(1)**.
+> Các hàm trên đều có độ phức tạp là **O(1)**, trừ hàm **q.push()** có độ phức tạp là **O(log(q.size()))**.
 
 ## **III. DEQUE**
 ### **1. Định nghĩa:**
