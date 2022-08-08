@@ -230,7 +230,7 @@ void DFS(int x)
 >   - Lấy đỉnh $y$ từ Queue để xét các đỉnh kề của nó.
 >   - Lần lượt duyệt các đỉnh kề của y. Với mỗi đỉnh $i$, thêm $i$ vào `Queue` để chuẩn bị cho việc xét các đỉnh kề của nó.
 ``` C++
-// DFS STACK
+// BFS QUEUE
 void BFS(int x)
 {
     queue<int> q;
