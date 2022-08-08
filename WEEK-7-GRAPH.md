@@ -313,3 +313,105 @@ int main()
     cout << cnt;
 }
 ```
+
+## **V. BÀI TẬP MẪU**
+### **1. DFS trên đồ thị vô hướng**
+``` C++
+#include <bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define ll long long
+const ll big = 1e6;
+vector<vector<int>> DanhSachKe(big);
+int check[big];
+void DFS(int x)
+{
+    cout << x << " ";
+    check[x] = 1;
+    for(auto i : DanhSachKe[x])
+    {
+        if(check[i] == 0)
+        {
+            DFS(i);
+        }
+    }
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int v, e, k; 
+        cin >> v >> e >> k;
+        for(int i = 1; i <= v; i++) check[i] = 0, DanhSachKe[i].clear();
+        
+        for(int i = 1; i <= e; i++)
+        {
+            int a, b; 
+            cin >> a >> b;
+            DanhSachKe[a].push_back(b); 
+            DanhSachKe[b].push_back(a); 
+        }
+        for(int i = 1; i <= v; i++)
+        {
+            sort(DanhSachKe[i].begin(), DanhSachKe[i].end());
+        }
+        DFS(k);
+        cout << endl;
+    }
+    
+}
+```
+### **2. BFS trên đồ thị có hướng**
+``` C++
+#include <bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define ll long long
+const ll big = 1e6;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int v, e, k; 
+        cin >> v >> e >> k;
+        vector<vector<int>> DanhSachKe(v + 10);
+        int check[v + 10] = {};
+        for(int i = 1; i <= e; i++)
+        {
+            int a, b; 
+            cin >> a >> b;
+            DanhSachKe[a].push_back(b); 
+        }
+        for(int i = 1; i <= v; i++)
+        {
+            sort(DanhSachKe[i].begin(), DanhSachKe[i].end());
+        }
+        queue<int> q;
+        q.push(k);
+        check[k] = 1;
+        while(q.size())
+        {
+            cout << q.front() << " ";
+            int tmp = q.front();
+            q.pop();
+            for(auto i : DanhSachKe[tmp])
+            {
+                if(check[i] == 0)
+                {
+                    q.push(i);
+                    check[i] = 1;
+                }
+            }
+        }
+        cout << endl;
+    }
+    
+}
+```
