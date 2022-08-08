@@ -95,7 +95,7 @@ Một ma trận kề (liền kề) là một mảng 2 chiều u $\times$ v, mỗ
 ## **III. CÁC THUẬT TOÁN TÌM KIẾM TRÊN ĐỒ THỊ**
 ### **1. Một số khái niệm liên quan**
 - **`Đường đi`** có độ dài $n$ từ đỉnh $A$ đến $B$ trong đồ thị là dãy các đỉnh ($x_1$, $x_2$, $x_3$, $...$,  $x_n$) với $A =$ $x_1$, $B =$ $x_n$
-- **`Đường đi`** có thể biểu diễn thành các dây cung: ($x_1$, $x_2$), ($x_2$, $x_3$), $...$, ($x_{n-1}$, $x_n$).
+- **`Đường đi`** có thể biểu diễn thành các dây cung: ( $x_1$, $x_2$), ( $x_2$, $x_3$), $...$, ( $x_{n-1}$, $x_n$).
 - Đỉnh A được gọi là đỉnh đầu, đỉnh B được gọi là đỉnh cuối của đường đi. Đường đi có `đỉnh đầu` trùng với `đỉnh cuối` ($A$ $\equiv$ $B$) được gọi là một **`chu trình`**.
 - **`Đường đi`** hay **`Chu trình`** nếu không có hai cạnh nào được lặp lại, ta gọi là **`Đường đi đơn`** và **`Chu trình đơn`**.
 ### **2. Tìm kiếm theo chiều sâu _(Depth First Search - DFS)_**
