@@ -4,16 +4,6 @@
 - *Khái niệm đồ thị cơ bản*
 - *BFS và DFS*
 
-Đồ thị là gì ?
-
-Đơn đồ thị
-
-Đa đồ thị
-
-Đồ thị có hướng
-
-Đồ thị vô hướng
-
 ## **I. TÌM HIỂU CHUNG VỀ ĐỒ THỊ**
 ### **1. Định nghĩa**
 #### a. Đồ thị là gì ?
