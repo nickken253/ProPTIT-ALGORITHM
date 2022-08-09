@@ -175,23 +175,22 @@ void DFS(int x)
 >   - Lấy danh sách đỉnh kề của $y$. Với mỗi đỉnh $i$, nếu $i$ chưa duyệt thì đẩy $i$ vào `Stack`.
 
 ``` C++
-// DFS Stack
+// DFS STACK
 void DFS(int x)
 {
     stack<int> st;
     st.push(x);
     while(st.size())
     {
-        cout << st.top() << " ";
         int y = st.top();
         st.pop();
         if(check[y] == 1) continue;
+        else cout << y << " ";
         // Nếu không kiểm tra có thể xảy ra trường hợp đỉnh đã duyệt quay lại stack và duyệt lại nhiều lần.
         check[y] = 1;
-        for(int i = 0; i < DanhSachKe[y]. size(); i++)
+        for(auto i : DanhSachKe[y])
         {
-            int tmp = DanhSachKe[y][i];
-            if(check[tmp] == 0) st.push(tmp);
+            if(check[i] == 0) st.push(i);
         }
     }
 }
